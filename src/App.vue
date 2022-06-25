@@ -1,26 +1,23 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from "vue-router";
-import HelloWorld from "@/components/HelloWorld.vue";
 </script>
 
-<template>
+<template class="app">
   <header>
-    <img
-      alt="Vue logo"
-      class="logo"
-      src="@/assets/logo.svg"
-      width="125"
-      height="125"
-    />
-
     <div class="wrapper">
-      <HelloWorld msg="Lottomaster" />
-
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/euro-jackpot">Euro Jackpot</RouterLink>
-      </nav>
+      <img
+        alt="lotto balls logo"
+        class="logo"
+        src="@/assets/lotto_balls.png"
+        width="70"
+        height="35"
+      />
+      <h1 class="green">Lottomaster</h1>
     </div>
+    <nav>
+      <RouterLink to="/">Home</RouterLink>
+      <RouterLink to="/euro-jackpot">Euro Jackpot</RouterLink>
+    </nav>
   </header>
 
   <RouterView />
@@ -33,18 +30,28 @@ import HelloWorld from "@/components/HelloWorld.vue";
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
-
+  display: flex;
+  flex-direction: column;
   font-weight: normal;
 }
 
 header {
   line-height: 1.5;
   max-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  margin-bottom: 2rem;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
 }
 
 .logo {
   display: block;
-  margin: 0 auto 2rem;
+  margin-right: 1rem;
 }
 
 a,
@@ -62,9 +69,9 @@ a,
 
 nav {
   width: 100%;
-  font-size: 12px;
+  font-size: 16px;
   text-align: center;
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 nav a.router-link-exact-active {
@@ -85,41 +92,25 @@ nav a:first-of-type {
   border: 0;
 }
 
-@media (min-width: 1024px) {
+@media (max-width: 1024px) {
   body {
     display: flex;
-    place-items: center;
-  }
-
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
   }
 
   header {
-    display: flex;
-    place-items: center;
+    place-items: flex-start;
     padding-right: calc(var(--section-gap) / 2);
   }
 
   header .wrapper {
-    display: flex;
     place-items: flex-start;
     flex-wrap: wrap;
   }
 
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
   nav {
-    text-align: left;
+    text-align: start;
     margin-left: -1rem;
     font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
   }
 }
 </style>
