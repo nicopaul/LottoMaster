@@ -1,6 +1,10 @@
+<script setup lang="ts">
+import LatestResults from '@/components/euroJackpot/LatestResults.vue';
+</script>
+
 <template>
   <div class="euro-jackpot">
-    <h1>This is the Euro Jackpot page</h1>
+    <LatestResults />
   </div>
 </template>
 
@@ -9,7 +13,8 @@
   .euro-jackpot {
     min-height: 100vh;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
 </style>

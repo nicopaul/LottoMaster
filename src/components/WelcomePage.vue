@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import SupportedLottoGameItem from "./SupportedLottoGameItem.vue";
-import DocumentationIcon from "./icons/IconDocumentation.vue";
 </script>
 
 <template>
