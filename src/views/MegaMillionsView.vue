@@ -1,16 +1,16 @@
 <script setup lang="ts">
-import LatestEuroJackpotResults from "@/components/euroJackpot/LatestEuroJackpotResults.vue";
+import LatestMegaMillionsResults from "@/components/megaMillions/LatestMegaMillionsResults.vue";
 </script>
 
 <template>
-  <div class="euro-jackpot">
-    <LatestEuroJackpotResults />
+  <div class="mega-million">
+    <LatestMegaMillionsResults />
   </div>
 </template>
 
 <style>
 @media (min-width: 1024px) {
-  .euro-jackpot {
+  .mega-million {
     min-height: 100vh;
     display: flex;
     flex-direction: column;

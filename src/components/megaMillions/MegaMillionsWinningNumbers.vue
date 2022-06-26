@@ -1,8 +1,8 @@
 <script setup lang="ts">
-defineProps<{
+const props = defineProps<{
   drawDate: string;
-  fiveOutOfFifty: number[];
-  euroNumbers: [number, number];
+  whiteBalls: string[];
+  goldMegaBall: string;
 }>();
 </script>
 
@@ -10,22 +10,18 @@ defineProps<{
   <div class="winning-number-paper">
     <span>Draw from {{ drawDate }}</span>
     <div class="winning-numbers">
-      <div class="five-out-of-fifty">
+      <div class="white-balls">
         <span
-          v-for="number in fiveOutOfFifty"
-          class="winning-number foof"
+          v-for="number in whiteBalls"
+          class="winning-number white-ball"
           :key="number"
         >
           {{ number }}
         </span>
       </div>
-      <div class="euro-numbers">
-        <span
-          v-for="number in euroNumbers"
-          class="winning-number euro-number"
-          :key="number"
-        >
-          {{ number }}
+      <div class="gold-mega-ball">
+        <span class="winning-number gold-ball">
+          {{ goldMegaBall }}
         </span>
       </div>
     </div>
@@ -45,11 +41,11 @@ defineProps<{
   display: flex;
 }
 
-.five-out-of-fifty,
-.euro-numbers {
+.white-balls,
+.gold-mega-ball {
   display: flex;
 }
-.five-out-of-fifty {
+.white-balls {
   margin-right: 1rem;
 }
 
@@ -62,11 +58,11 @@ defineProps<{
   text-align: center;
 }
 
-.foof {
-  background: radial-gradient(circle at 25px 25px, #e1c340, #ffff80);
+.white-ball {
+  background: radial-gradient(circle at 25px 25px, #bbbbbb, #ffffff);
 }
 
-.euro-number {
-  background: radial-gradient(circle at 25px 25px, #e32227, #f4a7a9);
+.gold-ball {
+  background: radial-gradient(circle at 25px 25px, #e1c340, #ffff80);
 }
 </style>

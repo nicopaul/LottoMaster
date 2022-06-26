@@ -12,10 +12,12 @@ const router = createRouter({
     {
       path: "/euro-jackpot",
       name: "euroJackpot",
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
       component: () => import("../views/EuroJackpotView.vue"),
+    },
+    {
+      path: "/mega-millions",
+      name: "megaMillions",
+      component: () => import("../views/MegaMillionsView.vue"),
     },
   ],
 });

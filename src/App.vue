@@ -17,6 +17,7 @@ import { RouterLink, RouterView } from "vue-router";
     <nav>
       <RouterLink to="/">Home</RouterLink>
       <RouterLink to="/euro-jackpot">Euro Jackpot</RouterLink>
+      <RouterLink to="/mega-millions">Mega Millions</RouterLink>
     </nav>
   </header>
 
